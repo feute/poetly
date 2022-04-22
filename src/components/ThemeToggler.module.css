@@ -1,5 +1,6 @@
 .button {
-  @apply absolute top-4 left-4 flex h-10 w-10 items-center justify-center text-neutral-600;
+  @apply absolute top-4 left-4 flex h-10 w-10 items-center justify-center rounded-sm text-neutral-600 transition;
+  @apply focus:ring focus:ring-neutral-200;
 }
 
 .icon {
@@ -8,4 +9,5 @@
 
 :global(.dark) .button {
   @apply text-neutral-300;
+  @apply focus:ring-neutral-800;
 }
