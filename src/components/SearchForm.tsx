@@ -30,7 +30,7 @@ export function SearchForm() {
   return (
     <form onSubmit={handleSubmit} className={styles.wrapper}>
       <div className={styles.inputWrapper}>
-        <div className={styles.searchIconWrapper}>
+        <button type="submit" className={styles.searchIconButton}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="28"
@@ -45,7 +45,7 @@ export function SearchForm() {
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
-        </div>
+        </button>
         <SearchInput
           type="text"
           placeholder="Search poem..."

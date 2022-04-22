@@ -15,10 +15,15 @@
   @apply pr-16;
 }
 
-.searchIconWrapper {
-  @apply absolute top-0 left-0 bottom-0 z-[1] flex w-14 items-center justify-center text-neutral-500;
+.searchIconButton {
+  @apply absolute top-0 left-0 bottom-0 z-[1] flex w-14 items-center justify-center text-neutral-500 transition;
+  @apply hover:text-neutral-700;
 }
 
 :global(.dark) .clearButton {
+  @apply hover:text-neutral-300;
+}
+
+:global(.dark) .searchIconButton {
   @apply hover:text-neutral-300;
 }
