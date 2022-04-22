@@ -19,7 +19,14 @@ function App() {
             </PoemsErrorBoundary>
           </Suspense>
         </main>
-        <div />
+        <footer className={styles.footer}>
+          <p className={styles.footerText}>
+            Created by{' '}
+            <a href="https://github.com/feute" target="_blank" rel="noreferrer noopener">
+              Ángel
+            </a>
+          </p>
+        </footer>
       </div>
     </Provider>
   );

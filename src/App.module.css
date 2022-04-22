@@ -14,3 +14,11 @@
 .loading {
   @apply text-center text-sm text-gray-600;
 }
+
+.footer {
+  @apply mt-10;
+}
+
+.footerText {
+  @apply text-sm font-medium text-gray-500;
+}
