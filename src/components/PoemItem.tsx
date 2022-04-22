@@ -33,7 +33,7 @@ function PoemLines({ lines }: TPoemLinesProps) {
     <Fragment>
       {index > 0 && <p className={styles.preverse}>{lines[index - 1]}</p>}
       <p className={styles.verse}>{lines[index]}</p>
-      {index < lines.length - 1 && <p className={styles.preverse}>{lines[index + 1]}</p>}
+      {index < lines.length - 1 && <p className={styles.postverse}>{lines[index + 1]}</p>}
     </Fragment>
   );
 }

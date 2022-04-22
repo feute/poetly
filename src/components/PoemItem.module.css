@@ -23,7 +23,7 @@
 }
 
 .postverse {
-  @apply text-sm text-neutral-700;
+  @apply text-sm text-neutral-600;
 }
 
 :global(.dark) .wrapper {
@@ -39,5 +39,5 @@
 }
 
 :global(.dark) .postverse {
-  @apply text-neutral-300;
+  @apply text-neutral-400;
 }
