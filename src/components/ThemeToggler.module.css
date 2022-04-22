@@ -1,0 +1,11 @@
+.button {
+  @apply absolute top-4 left-4 flex h-10 w-10 items-center justify-center text-neutral-600;
+}
+
+.icon {
+  @apply h-6 w-6;
+}
+
+:global(.dark) .button {
+  @apply text-neutral-300;
+}

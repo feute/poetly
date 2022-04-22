@@ -7,12 +7,11 @@
 }
 
 .heading {
-  @apply mb-10 select-none text-4xl font-black text-gray-300 transition;
-  @apply hover:text-gray-500;
+  @apply mb-10 select-none text-4xl font-black text-neutral-600;
 }
 
 .loading {
-  @apply text-center text-sm text-gray-600;
+  @apply text-center text-sm text-neutral-600;
 }
 
 .footer {
@@ -20,5 +19,13 @@
 }
 
 .footerText {
-  @apply text-sm font-medium text-gray-500;
+  @apply text-sm font-medium text-neutral-500;
+}
+
+:global(.dark) .heading {
+  @apply text-neutral-200;
+}
+
+:global(.dark) .loading {
+  @apply text-neutral-400;
 }

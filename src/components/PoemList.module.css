@@ -1,3 +1,7 @@
 .error {
-  @apply text-center text-sm text-gray-600;
+  @apply text-center text-sm text-neutral-600;
+}
+
+:global(.dark) .error {
+  @apply text-neutral-400;
 }

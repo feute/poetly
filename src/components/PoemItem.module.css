@@ -1,5 +1,5 @@
 .wrapper {
-  @apply mb-3 w-full overflow-x-auto rounded p-4 ring-1 ring-gray-200;
+  @apply mb-3 w-full overflow-x-auto rounded p-4 ring-1 ring-neutral-200;
 }
 
 .header {
@@ -11,17 +11,33 @@
 }
 
 .author {
-  @apply text-sm text-gray-600;
+  @apply text-sm text-neutral-600;
 }
 
 .verse {
-  @apply text-sm font-medium text-gray-900;
+  @apply text-sm font-medium text-neutral-900;
 }
 
 .preverse {
-  @apply text-sm text-gray-500;
+  @apply text-sm text-neutral-500;
 }
 
 .postverse {
-  @apply text-sm text-gray-700;
+  @apply text-sm text-neutral-700;
+}
+
+:global(.dark) .wrapper {
+  @apply ring-neutral-800;
+}
+
+:global(.dark) .author {
+  @apply text-neutral-400;
+}
+
+:global(.dark) .verse {
+  @apply text-neutral-100;
+}
+
+:global(.dark) .postverse {
+  @apply text-neutral-300;
 }
