@@ -7,7 +7,12 @@ export function ThemeToggler() {
   const [darkMode, setDarkMode] = useAtom(darkModeAtomWithPersistence);
 
   return (
-    <button type="button" className={styles.button} onClick={() => setDarkMode(!darkMode)}>
+    <button
+      type="button"
+      className={styles.button}
+      onClick={() => setDarkMode(!darkMode)}
+      aria-label="Toggle dark mode"
+    >
       {darkMode ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
