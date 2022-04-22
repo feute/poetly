@@ -15,7 +15,7 @@
 }
 
 .verse {
-  @apply text-sm font-medium text-neutral-900;
+  @apply text-sm font-bold text-neutral-900;
 }
 
 .preverse {
