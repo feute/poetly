@@ -1,3 +1,15 @@
 .root {
-  @apply flex min-h-screen flex-col items-center justify-center py-8;
+  @apply flex min-h-screen flex-col items-center justify-between px-3 py-8;
+}
+
+.mainSection {
+  @apply w-[500px] max-w-full;
+}
+
+.heading {
+  @apply mb-10 text-4xl font-black text-gray-500;
+}
+
+.loading {
+  @apply text-center text-sm text-gray-600;
 }

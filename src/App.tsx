@@ -1,47 +1,27 @@
-import { useState } from 'react';
-import type { ChangeEvent, FormEvent } from 'react';
+import { Provider } from 'jotai';
+import { Suspense } from 'react';
 
 import styles from './App.module.css';
-
-const BASE_URL = 'https://poetrydb.org';
+import { SearchForm } from './components/SearchForm';
+import { PoemsErrorBoundary } from './components/PoemsErrorBoundary';
+import { PoemList } from './components/PoemList';
 
 function App() {
-  const [query, setQuery] = useState('');
-  const [results, setResults] = useState<any>();
-
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    fetchPoems(query);
-  }
-
-  function handleInputChange(event: ChangeEvent<HTMLInputElement>) {
-    setQuery(event.target.value);
-  }
-
-  async function fetchPoems(query: string) {
-    const response = await fetch(`${BASE_URL}/lines/${encodeURI(query)};1`);
-
-    if (response.ok) {
-      const json = await response.json();
-      setResults(json);
-    }
-  }
-
   return (
-    <div className={styles.root}>
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Search" value={query} onChange={handleInputChange} />
-      </form>
-      {results && (
-        <div>
-          {results.map((poem: any, index: number) => (
-            <h3 key={index}>
-              {poem.title} - {poem.author}
-            </h3>
-          ))}
-        </div>
-      )}
-    </div>
+    <Provider>
+      <div className={styles.root}>
+        <h1 className={styles.heading}>Poetly</h1>
+        <main className={styles.mainSection}>
+          <SearchForm />
+          <Suspense fallback={<p className={styles.loading}>Loading...</p>}>
+            <PoemsErrorBoundary>
+              <PoemList />
+            </PoemsErrorBoundary>
+          </Suspense>
+        </main>
+        <div />
+      </div>
+    </Provider>
   );
 }
 

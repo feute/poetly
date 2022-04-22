@@ -1,0 +1,27 @@
+.wrapper {
+  @apply mb-3 w-full overflow-x-auto rounded p-4 ring-1 ring-gray-200;
+}
+
+.header {
+  @apply mb-4;
+}
+
+.title {
+  @apply text-base font-bold;
+}
+
+.author {
+  @apply text-sm text-gray-600;
+}
+
+.verse {
+  @apply text-sm font-medium text-gray-900;
+}
+
+.preverse {
+  @apply text-sm text-gray-500;
+}
+
+.postverse {
+  @apply text-sm text-gray-700;
+}
